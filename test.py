@@ -12,12 +12,8 @@ def info(message):
 
 @bot.message_handler(commands=['start'])
 def main(message):
-<<<<<<< Updated upstream
-    
-    bot.send_message(message.chat.id,f'Приветствуем вас, {message.from_user.first_name},в нашей онлайн школе «Учиться просто». У нас вам будет учиться не только просто, но и интересно. Вы с легкостью усвоите новый материал, а также закрепите старый. Занятия проводятся по русскому, математике, физике, истории, веб-дизайну в програме figma и создание сайтов(HTML/CSS). Вы сможете сами выбрать преподавателя, удобное время и дату. Нам интересны предметы, который мы преподаём, а также создадим интерес у вас.')
 
 
-=======
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton('test', callback_data='test'))
 
@@ -30,7 +26,6 @@ def main(message):
 def callback_message(callback):
     if callback.data == 'test':
        bot.send_message(callback.message.chat.id, f'Succses' )
->>>>>>> Stashed changes
 
 bot.polling(none_stop=True)
 
